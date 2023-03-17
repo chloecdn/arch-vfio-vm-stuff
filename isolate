@@ -8,7 +8,7 @@ function downloadMkInitFile() {
 }
 
 if [ "$EUID" -ne 0 ]
-  then echo "Please run this script as root (sudo)"
+  then echo "Please run this script as root."
   exit
 fi
 
