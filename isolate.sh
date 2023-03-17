@@ -3,7 +3,7 @@ wget -O /usr/local/bin/vfio-pci-override.sh https://raw.githubusercontent.com/ch
 chmod +x /usr/local/bin/vfio-pci-override.sh
 
 while true; do
-    read -p "Are you using Btrfs? [y/n]" yn
+    read -p "Are you using Btrfs?" yn
     case $yn in
         [Yy]* ) wget -O /etc/mkinitcpio.conf https://raw.githubusercontent.com/chloecdn/arch-vfio-vm-stuff/main/etc/mkinitcpio.conf.btrfs;;
         [Nn]* ) wget -O /etc/mkinitcpio.conf https://raw.githubusercontent.com/chloecdn/arch-vfio-vm-stuff/main/etc/mkinitcpio.conf;;
