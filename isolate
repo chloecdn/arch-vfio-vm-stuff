@@ -1,0 +1,16 @@
+function downloadMkInitFile() {
+  read -p "Are you using Btrfs? [y/n]" isBtrfs
+  case "$isBtrfs" in 
+    y|Y ) echo "Downloading CPIO-Config..."; wget -O /etc/mkinitcpio.conf https://raw.githubusercontent.com/chloecdn/arch-vfio-vm-stuff/main/etc/mkinitcpio.conf.btrfs &> /dev/null;;
+    n|N ) echo "Downloading CPIO-Config..."; wget -O /etc/mkinitcpio.conf https://raw.githubusercontent.com/chloecdn/arch-vfio-vm-stuff/main/etc/mkinitcpio.conf &> /dev/null;;
+    * ) echo "Invalid Input..."; downloadMkInitFile;;
+  esac
+}
+
+echo "This Script will Isolate all of your Non-Boot GPU's. Please make sure you are running this on a fresh Arch-Install."
+wget -O /usr/local/bin/vfio-pci-override.sh https://raw.githubusercontent.com/chloecdn/arch-vfio-vm-stuff/main/vfio-pci-override.sh &> /dev/null
+chmod +x /usr/local/bin/vfio-pci-override.sh
+downloadMkInitFile
+wget -O /etc/modprobe.d/vfio.conf https://raw.githubusercontent.com/chloecdn/arch-vfio-vm-stuff/main/etc/modprobe.d/vfio.conf &> /dev/null
+
+echo "Your Non-Boot GPU's should be isolated now. Please reboot for it to take effect."
