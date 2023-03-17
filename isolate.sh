@@ -7,6 +7,6 @@ while true; do
     case $yn in
         [Yy]* ) wget -O /etc/mkinitcpio.conf https://raw.githubusercontent.com/chloecdn/arch-vfio-vm-stuff/main/etc/mkinitcpio.conf.btrfs;;
         [Nn]* ) wget -O /etc/mkinitcpio.conf https://raw.githubusercontent.com/chloecdn/arch-vfio-vm-stuff/main/etc/mkinitcpio.conf;;
-        * );;
+        * ) exit;;
     esac
 done
