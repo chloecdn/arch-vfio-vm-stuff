@@ -1,8 +1,6 @@
 # arch-vfio-vm-stuff
 
-# DONT USE THIS - ITS STILL IN WORK!
-
-This contains a few scripts i created to automate creating an amd-vfio-setup on arch.
+This contains a few scripts i created to automate creating an amd-vfio-setup on arch. Don't blame me if something breaks your already working system.
 Use these scripts with caution. They are made for my specific hardware, and while they should work on most other AMD-Hardware, they will most likely break on Intel/Nvidia.
 
 My Hardware:
