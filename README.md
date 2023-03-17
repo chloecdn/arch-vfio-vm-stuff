@@ -1,5 +1,7 @@
 # arch-vfio-vm-stuff
 
+# DONT USE THIS - ITS STILL IN WORK!
+
 This contains a few scripts i created to automate creating a vfio-setup on arch.
 Use these scripts with caution. They may break.
 
