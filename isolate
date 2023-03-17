@@ -8,9 +8,15 @@ function downloadMkInitFile() {
 }
 
 echo "This Script will Isolate all of your Non-Boot GPU's. Please make sure you are running this on a fresh Arch-Install."
+echo
+echo
+echo "Downloading PCI-Override Script..."
 wget -O /usr/local/bin/vfio-pci-override.sh https://raw.githubusercontent.com/chloecdn/arch-vfio-vm-stuff/main/vfio-pci-override.sh &> /dev/null
 chmod +x /usr/local/bin/vfio-pci-override.sh
+echo "Done."
 downloadMkInitFile
+echo "Done."
+echo "Downloading VFIO-Config..."
 wget -O /etc/modprobe.d/vfio.conf https://raw.githubusercontent.com/chloecdn/arch-vfio-vm-stuff/main/etc/modprobe.d/vfio.conf &> /dev/null
-
+echo "Done."
 echo "Your Non-Boot GPU's should be isolated now. Please reboot for it to take effect."
