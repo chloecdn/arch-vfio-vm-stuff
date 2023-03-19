@@ -1,7 +1,6 @@
 # Arch VFIO AMD-GPU Isolation
 
 This contains a few scripts i created to automate isolating your GPU on a **fresh** Arch Installation. Don't blame me if something breaks your already working system.
-Use these scripts with caution. They are made for my specific hardware, and while they should work on most other AMD-Hardware, they will most likely break on Intel/Nvidia.
 
 My Hardware:
 - Ryzen 7 5800X3D
