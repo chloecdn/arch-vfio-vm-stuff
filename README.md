@@ -10,7 +10,7 @@ My Hardware:
 
 1: Enable IOMMU and Virtualization (AMD-V) in your Motherboard's BIOS.
 
-2: Run the script `isolate.sh` **as root-user. Sudo isn't enough!**:<br>
+2: Run the isolation-file **as root-user. Sudo isn't enough!**:<br>
 - Bash: `bash <(curl -s https://raw.githubusercontent.com/chloecdn/arch-vfio-vm-stuff/main/isolate)`
 - ZSH: `zsh <(curl -s https://raw.githubusercontent.com/chloecdn/arch-vfio-vm-stuff/main/isolate)`
   - This will put the overide-script onto your system, add the required kernel-modules and files and then rebuild the modules.
