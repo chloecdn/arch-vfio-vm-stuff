@@ -11,9 +11,10 @@ My Hardware:
 1: Enable IOMMU and Virtualization (AMD-V) in your Motherboard's BIOS.
 
 2: Run the script `isolate.sh` **as root-user. Sudo isn't enough!**:<br>
-`bash <(curl -s https://raw.githubusercontent.com/chloecdn/arch-vfio-vm-stuff/main/isolate)`
-- This will put the overide-script onto your system, add the required kernel-modules and files and then rebuild the modules.
-- When done, reboot your system. Your Other GPU's should now be isolated.
+- Bash: `bash <(curl -s https://raw.githubusercontent.com/chloecdn/arch-vfio-vm-stuff/main/isolate)`
+- ZSH: `zsh <(curl -s https://raw.githubusercontent.com/chloecdn/arch-vfio-vm-stuff/main/isolate)`
+  - This will put the overide-script onto your system, add the required kernel-modules and files and then rebuild the modules.
+  - When done, reboot your system. Your Other GPU's should now be isolated.
 
 3: Download all the Required packages for Virtualization:<br>
 `sudo pacman -S qemu libvirt edk2-ovmf virt-manager virt-viewer swtpm iptables-nft dnsmasq`
