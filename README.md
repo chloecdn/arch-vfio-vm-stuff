@@ -21,7 +21,7 @@ My Hardware:
 
 4: Enable Libvirt and add yourself to the libvirt group:<br>
 `sudo systemctl enable --now libvirtd virtlogd`<br>
-`sudo usermod -aG libvirt $(whoami)
+`sudo usermod -aG libvirt $(whoami)`
 
 5: Create a Virtual Machine inside `Virtual Machine Manager`. At this point, you should be able to figure stuff out yourself. If not, [here](https://www.youtube.com/watch?v=rA5iLjRTiZQ&t=311s) is some tutorial that i found very helpful. Thanks Skaii!
 
