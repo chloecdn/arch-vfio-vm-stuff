@@ -12,7 +12,7 @@ My Hardware:
 
 2: Run the isolation-file **as root-user. Sudo isn't enough!**:<br>
 
-`bash <(curl -s https://raw.githubusercontent.com/chloecdn/arch-vfio-amd-gpu-isolation/main/isolate)`
+`bash <(curl -s https://raw.githubusercontent.com/kianagit/arch-vfio-amd-gpu-isolation/main/isolate)`
   - This will put the overide-script onto your system, add the required kernel-modules and files and then rebuild the modules.
   - When done, reboot your system. Your Other GPU's should now be isolated.
 
