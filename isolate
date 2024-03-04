@@ -1,8 +1,8 @@
 function downloadMkInitFile() {
   read -p "Are you using Btrfs? [y/n]" isBtrfs
   case "$isBtrfs" in
-    y|Y ) echo "Downloading CPIO-Config..."; wget -q -O /etc/mkinitcpio.conf https://raw.githubusercontent.com/kianagit/arch-vfio-amd-gpu-isolation/main/etc/mkinitcpio.conf.btrfs;;
-    n|N ) echo "Downloading CPIO-Config..."; wget -q -O /etc/mkinitcpio.conf https://raw.githubusercontent.com/kianagit/arch-vfio-amd-gpu-isolation/main/etc/mkinitcpio.conf;;
+    y|Y ) echo "Downloading CPIO-Config..."; wget -q -O /etc/mkinitcpio.conf https://raw.githubusercontent.com/lunatic-gh/arch-vfio-amd-gpu-isolation/main/etc/mkinitcpio.conf.btrfs;;
+    n|N ) echo "Downloading CPIO-Config..."; wget -q -O /etc/mkinitcpio.conf https://raw.githubusercontent.com/lunatic-gh/arch-vfio-amd-gpu-isolation/main/etc/mkinitcpio.conf;;
     * ) echo "Invalid Input..."; downloadMkInitFile;;
   esac
 }
@@ -13,7 +13,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 echo "Downloading PCI-Override Script..."
-wget -q -O /usr/local/bin/vfio-pci-override.sh https://raw.githubusercontent.com/kianagit/arch-vfio-amd-gpu-isolation/main/vfio-pci-override.sh
+wget -q -O /usr/local/bin/vfio-pci-override.sh https://raw.githubusercontent.com/lunatic-gh/arch-vfio-amd-gpu-isolation/main/vfio-pci-override.sh
 chmod +x /usr/local/bin/vfio-pci-override.sh
 echo "Done."
 clear
@@ -21,7 +21,7 @@ downloadMkInitFile
 echo "Done."
 clear
 echo "Downloading VFIO-Config..."
-wget -q -O /etc/modprobe.d/vfio.conf https://raw.githubusercontent.com/kianagit/arch-vfio-amd-gpu-isolation/main/etc/modprobe.d/vfio.conf
+wget -q -O /etc/modprobe.d/vfio.conf https://raw.githubusercontent.com/lunatic-gh/arch-vfio-amd-gpu-isolation/main/etc/modprobe.d/vfio.conf
 echo "Done."
 clear
 echo "Rebuilding Kernel-Modules..."
